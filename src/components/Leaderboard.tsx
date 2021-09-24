@@ -46,12 +46,16 @@ export default function Leaders(): JSX.Element {
       getTopDogs();
     }, []);
   
+    function getAll () {
+      getDogs();
+      getTopDogs()
+    }
 
   return (
     <section>
       {dogs && topDogs && (
         <div>
-        <button className = "bigButtonLeaders" onClick={() => getDogs()}>Fetch me the leaderboard</button>
+        <button className = "bigButtonLeaders" onClick={() => getAll()}>Fetch me the leaderboard</button>
       <section className = "leaders">
         <div className = "leadersLeft">
             <h2>Dog Board</h2>
@@ -69,7 +73,7 @@ export default function Leaders(): JSX.Element {
           {topDogs.map((dog, index) => (
             <li key={index}>
               <h1>{dog.breed}:{dog.vote_count}</h1>
-             <img src={dog.example_image} alt ="top doggo" width = "60%"/>
+             <img src={dog.example_image} alt ="top doggo" width = "90%"/>
             </li>
           ))}
         </ol>
