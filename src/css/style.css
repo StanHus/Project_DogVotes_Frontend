@@ -43,3 +43,37 @@
     display:grid;
     text-align: center;
 }
+
+.header {
+    text-align: center;
+    color: white;
+    margin-bottom: 3%;
+    background-color: rgb(60, 99, 2);
+    padding: 1%;
+}
+
+.leaderboard {
+    width:30%;
+    text-align: center;
+}
+
+.bigButtonLeaders {
+    text-align: center;
+    background-color: rgb(22, 100, 74);
+    color: white;
+    font-size: 120%;
+    padding: 1%;
+    flex-basis: center;
+    margin-left: 30%;
+    margin-top: 3%;
+}
+.bigButtonGet {
+    text-align: center;
+    background-color: rgb(22, 100, 74);
+    color: white;
+    font-size: 120%;
+    padding: 1%;
+    flex-basis: center;
+    margin-left: 36%;
+    margin-bottom: 3%;
+}

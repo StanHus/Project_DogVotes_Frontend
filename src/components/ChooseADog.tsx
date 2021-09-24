@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../css/style.css"
 
 
@@ -9,19 +9,20 @@ const TwoDogs = ():JSX.Element => {
     const [link2, setLink2]= useState("https://warm-brushlands-45153.herokuapp.com/lbCx")
 
     const handleVoteDog = async (link: string) => {
+      const url = new URL(link)
+      const breedName = url.pathname.split("/")[2]
+      const imageLink = link
         try {
-            const url = new URL(link)
-            const breedName = url.pathname.split("/")[2]
-            const imageLink = link
-            console.log()
-            console.log(url.searchParams.get("breeds"))
-            fetch("https://guarded-savannah-68799.herokuapp.com/", {
+           await fetch("https://guarded-savannah-68799.herokuapp.com/", {
                 method: "POST",
+                headers: { "Content-Type": "application/json"},
                 body: JSON.stringify({
                   breed: breedName,
-                  exmpleImage: imageLink,
+                  exampleImage: imageLink,
                 })
               })
+              console.log(breedName)
+              console.log(imageLink)
         }
          catch (err) {
           console.error(err);
@@ -50,7 +51,7 @@ const TwoDogs = ():JSX.Element => {
       if (link1 === "https://warm-brushlands-45153.herokuapp.com/lbCx"){
         return(
             <div>
-                <button onClick = {()=>getLinks()}>GET ME DOGS!!</button>
+                <button className = "bigButtonGet" onClick = {()=>getLinks()}>GET ME DOGS!!</button>
                 <div className ="doggoPics">
                     <img className = "doggoPic" src = {link1} alt ="doggo" width ="300"/>
                     <img className = "doggoPic" src = {link2} alt ="doggo" width ="300"/>

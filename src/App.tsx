@@ -1,11 +1,15 @@
 import React from 'react';
 import TwoDogs from './components/ChooseADog';
+import Header from "./components/Header"
+import Leaders from './components/Leaderboard';
 
 function App() {
   return (
     <div>
-      <h1>Hello world</h1>
+      <Header />
       <TwoDogs />
+      <br />
+      <Leaders />
     </div>
   );
 }
