@@ -9,7 +9,7 @@ function App() {
       <Header />
       <TwoDogs />
       <br />
-      <Leaders />
+        <Leaders />
     </div>
   );
 }
