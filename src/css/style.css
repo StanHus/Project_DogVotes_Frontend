@@ -1,0 +1,45 @@
+.doggoPics {
+    width: 90%;
+    margin-left:5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.doggoPic {
+    border-radius: 3px;
+    border: black solid 1px;
+    background-color: rgb(150, 184, 3);
+    font-size: auto;
+    color: white;
+    padding: 1%;
+    margin-left: 12%;
+    margin-right: 12%;
+    margin-top: 1%;
+    width: 20%;
+    display:grid;
+    text-align: center;
+}
+
+.buttons{
+    width: 90%;
+    margin-left:5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.button{
+    border-radius: 3px;
+    border: black solid 1px;
+    background-color: rgb(150, 184, 3);
+    font-size: auto;
+    color: white;
+    padding: 1%;
+    margin-left: 12%;
+    margin-right: 12%;
+    margin-top: 1%;
+    width: 22.5%;
+    display:grid;
+    text-align: center;
+}
